@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InsertTable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/nameTableEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Name Table" />
+
+            <EditText
+                android:id="@+id/nameColumnEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Name Column" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/dataTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/primaryKeyCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Primary Key" />
+
+                <CheckBox
+                    android:id="@+id/autoIncrementCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto Increment" />
+
+                <CheckBox
+                    android:id="@+id/uniqueCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unique" />
+
+                <CheckBox
+                    android:id="@+id/notnullCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Null" />
+
+                <CheckBox
+                    android:id="@+id/defaultCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Default" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/defaultEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Default" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/columnRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/addColumnButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkInputsForColumn"
+                android:text="ADD COLUMN" />
+
+            <Button
+                android:id="@+id/createTableButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CREATE TABLE"
+                android:onClick="insertTable"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

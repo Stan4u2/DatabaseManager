@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListTables">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="TABLES"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tablesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addTableButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD TABLE"
+            android:onClick="addTable"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/selectDatabaseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONSULT DATA"
+            android:onClick="customSearch"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
